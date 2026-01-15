@@ -1,18 +1,16 @@
-# SkillTrust – Microservices Platform
+# SkillTrust – Microservices Infrastructure (Week-1)
 
-This repository contains the infrastructure and services for **SkillTrust**,
-a real-world hiring and AI-driven interview platform.
+This repository contains the **infrastructure layer** for SkillTrust,
+a real-world microservices-based hiring & interview platform.
 
-## Architecture
-This project is built using:
-- Spring Boot microservices
-- Kafka for event-driven communication
-- PostgreSQL for data storage
-- MinIO for file storage
-- Nginx as API Gateway
-- Docker for containerization
+## Tech Stack
+- PostgreSQL – Relational Database
+- Kafka + Zookeeper – Event Streaming
+- MinIO – S3-compatible Object Storage
+- Nginx – API Gateway
+- Docker Compose – Container Orchestration
 
-## Services
+## Services (Planned)
 - Auth Service
 - User Service
 - Job Service
@@ -22,5 +20,15 @@ This project is built using:
 - Payment Service
 - Notification Service
 
-## Status
-Week-1: Infrastructure setup in progress
+## Architecture (High Level)
+
+Client  
+→ Nginx API Gateway  
+→ Microservices  
+→ PostgreSQL / Kafka / MinIO  
+
+## How to Run (Week-1)
+
+```bash
+docker-compose down
+docker-compose up -d
